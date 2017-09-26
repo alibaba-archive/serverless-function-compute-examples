@@ -1,0 +1,10 @@
+{
+  "name": "serverless-aliyun-hello-world",
+  "version": "0.1.0",
+  "description": "Hello World example for aliyun provider with Serverless Framework.",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "serverless-aliyun-function-compute": "^1.0.0"
+  }
+}

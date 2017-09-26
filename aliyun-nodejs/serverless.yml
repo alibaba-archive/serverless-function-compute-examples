@@ -1,0 +1,23 @@
+service: serverless-aliyun-hello-world
+
+provider:
+  name: aliyun
+  runtime: nodejs6
+  credentials: ~/.aliyuncli/credentials # path must be absolute
+
+plugins:
+  - serverless-aliyun-function-compute
+
+package:
+  exclude:
+    - package-lock.json
+    - .gitignore
+    - .git/**
+
+functions:
+  hello:
+    handler: index.hello
+    events:
+      - http:
+          path: /foo
+          method: get
