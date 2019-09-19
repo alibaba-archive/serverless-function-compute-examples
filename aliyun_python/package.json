@@ -1,0 +1,14 @@
+{
+  "name": "aliyun-python-weather-forecase",
+  "version": "1.0.0",
+  "description": "Alibaba Cloud Function Compute Python Template for the Serverless Framework.",
+  "main": "index.py",
+  "license": "MIT",
+  "keywords": [
+    "serverless",
+    "aliyun"
+  ],
+  "devDependencies": {
+    "serverless-aliyun-function-compute": "^1.2.3"
+  }
+}
