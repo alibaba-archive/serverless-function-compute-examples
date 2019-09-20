@@ -16,7 +16,7 @@ Invoke the demo function with city name(in chinese), it will return all the data
 You can install the demo from GitHub:
 
 ```sh
-$ serverless install --url https://github.com/aliyun/serverless-function-compute-examples/tree/master/aliyun-python
+$ serverless install --url https://github.com/aliyun/serverless-function-compute-examples/tree/master/aliyun_python
 ```
 
 The structure of the project should look something like this:
