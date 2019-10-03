@@ -6,7 +6,6 @@ This example demonstrates how to fetch an image from a remote web source and upl
 
 * Install Serverless CLI v1.26.1+. You can get it by running `npm i -g serverless`.
 * Apply for an Alibaba cloud account and apply to use [Aliyun Function Compute](https://fc.console.aliyun.com) service
-* Enable [Aliyun OSS service](https://oss.console.aliyun.com) and create a bucket in the same region
 
 ### Install demo & `serverless-aliyun-function-compute` plugin
 You can install the demo from GitHub:
@@ -45,13 +44,6 @@ aliyun_account_id = 1234567890
 * You can find the `aliyun_account_id` from [Account](https://account-intl.console.aliyun.com/?#/secure).
 * After creating the `aliyun_credentials` file, please make sure to change the `credentials` field value in `serverless.yml` to the absolute file path.
 
-### Fill in your OSS bucket info
-
-* replace '<region>' with oss bucket region in the index.py file
-* replace '<bucket>' with oss bucket name in the index.py file
-
-For example, if your bucket domain name is "demo.oss-us-east-1.aliyuncs.com", "us-east-1" is the region, "demo" is the bucket name.
-
 ### Prepare input file
 
 Please create a `event.json` file and copy the following content.
@@ -75,3 +67,5 @@ Make sure that you have activated Function Compute before attempting to deploy y
   ```sh
   serverless invoke --function image-crawler --path event.json
   ```
+
+* Copy the link in the response and browse your images.
