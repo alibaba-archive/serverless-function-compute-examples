@@ -19,10 +19,14 @@ def handler(event, context):
     evt = json.loads(event)
     url = evt['url']
     logger.info('process url: ' + url)
-    endpoint = 'oss-'<region>'.aliyuncs.com' # replace '<region>' with oss bucket region
+    account = context.account_id
+    region = context.region
     creds = context.credentials
+    endpoint = 'oss-'+region+'.aliyuncs.com'
     auth = oss2.StsAuth(creds.accessKeyId, creds.accessKeySecret, creds.securityToken)
-    bucket = oss2.Bucket(auth, endpoint, '<bucket>') # replace '<bucket>' with oss bucket name
+    bucketname = 'sls-' + account + '-' + region
+    bucket = oss2.Bucket(auth, endpoint, bucketname)
+    bucketurl = 'https://oss.console.aliyun.com/bucket/oss-' + region + '/' + bucketname + '/object'
 
     html = getHtml(url)
     img_list = getImg(html)
@@ -35,7 +39,7 @@ def handler(event, context):
         # Store the picture in oss bucket, keyed by timestamp in microsecond unit
         bucket.put_object(str(datetime.datetime.now().microsecond) + '.jpg', pic)
 
-    return 'download success, total pictures:' + str(count)
+    return 'Download success, total pictures:' + str(count) + '. Please check your images here: ' + bucketurl
 
 
 # Parse urls from content
