@@ -1,0 +1,15 @@
+{
+  "name": "image-crawler",
+  "version": "1.0.0",
+  "description": "Alibaba Cloud Function Compute Python Image Crawler for the Serverless Framework.",
+  "main": "index.py",
+  "license": "MIT",
+  "keywords": [
+    "serverless",
+    "aliyun",
+    "alibaba cloud"
+  ],
+  "devDependencies": {
+    "serverless-aliyun-function-compute": "^1.2.6"
+  }
+}
