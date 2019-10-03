@@ -1,4 +1,5 @@
-#Fetch image from URL then upload to Aliyun OSS Example
+# Fetch image from URL then upload to Aliyun OSS Example
+
 This example demonstrates how to fetch an image from a remote web source and upload this image to an OSS bucket using the serverless framework with alibaba cloud as the provider.
 
 ## Setup
