@@ -68,4 +68,4 @@ Make sure that you have activated Function Compute before attempting to deploy y
   serverless invoke --function image-crawler --path event.json
   ```
 
-* Copy the link in the response and browse your images.
+* Copy the link in the response to your browser and log into your aliyun account if prompted.  You can now browse the images in alibaba cloud console.
