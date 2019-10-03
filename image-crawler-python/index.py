@@ -19,7 +19,7 @@ def handler(event, context):
     evt = json.loads(event)
     url = evt['url']
     logger.info('process url: ' + url)
-    endpoint = 'oss-cn-'<region>'.aliyuncs.com' # replace '<region>' with oss bucket region
+    endpoint = 'oss-'<region>'.aliyuncs.com' # replace '<region>' with oss bucket region
     creds = context.credentials
     auth = oss2.StsAuth(creds.accessKeyId, creds.accessKeySecret, creds.securityToken)
     bucket = oss2.Bucket(auth, endpoint, '<bucket>') # replace '<bucket>' with oss bucket name
@@ -47,7 +47,7 @@ def getHtml(url):
 
 # Get jpg list
 def getImg(html):
-    reg = r'http:\/\/[^\s,"]*\.png'
+    reg = r'<img[^>]+src="([^">]+)"'
     imgre = re.compile(reg)
     imglist = re.findall(imgre, html)
     return imglist

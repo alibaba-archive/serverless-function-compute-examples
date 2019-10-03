@@ -49,14 +49,14 @@ aliyun_account_id = 1234567890
 * replace '<region>' with oss bucket region in the index.py file
 * replace '<bucket>' with oss bucket name in the index.py file
 
-For example, if your bucket domain name is "demo.oss-cn-shanghai.aliyuncs.com", "shanghai" is the region, "demo" is the bucket name.
+For example, if your bucket domain name is "demo.oss-us-east-1.aliyuncs.com", "us-east-1" is the region, "demo" is the bucket name.
 
 ### Prepare input file
 
 Please create a `event.json` file and copy the following content.
 ```json
 {
-  "url": "https://help.aliyun.com/document_detail/52895.html"
+  "url": "https://www.wsj.com"
 }
 ```
 

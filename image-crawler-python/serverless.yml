@@ -13,6 +13,7 @@ service: image-crawler-python
 
 provider:
   name: aliyun
+  region: us-east-1
   runtime: python2.7
   credentials: ~/.aliyuncli/credentials # path must be absolute
   ramRoleStatements:
