@@ -38,8 +38,13 @@ def handler(event, context):
         pic = urllib.urlopen(item)
         # Store the picture in oss bucket, keyed by timestamp in microsecond unit
         bucket.put_object(str(datetime.datetime.now().microsecond) + '.jpg', pic)
-
-    return 'Download success, total pictures:' + str(count) + '. Please check your images here: ' + bucketurl
+    message = 'Download success, total pictures:' + str(count) + '. Please check your images here: ' + bucketurl
+    message_body = json.dumps({'result': message })
+    response = {
+        "statusCode": 200,
+        "body": message_body
+    }
+    return response
 
 
 # Parse urls from content

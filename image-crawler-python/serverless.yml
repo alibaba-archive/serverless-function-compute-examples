@@ -35,3 +35,7 @@ package:
 functions:
   image-crawler:
     handler: index.handler
+    events:
+      - http:
+        path: /crawl
+        method: post
